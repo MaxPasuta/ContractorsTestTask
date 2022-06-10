@@ -13,6 +13,10 @@
 		6E1D20CA284ED8AC006DD1DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E1D20C9284ED8AC006DD1DC /* Preview Assets.xcassets */; };
 		6E1D20CC284ED8AC006DD1DC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1D20CB284ED8AC006DD1DC /* Persistence.swift */; };
 		6E1D20CF284ED8AC006DD1DC /* ContractorsTestTask.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E1D20CD284ED8AC006DD1DC /* ContractorsTestTask.xcdatamodeld */; };
+		6E1D20D8284EDB6C006DD1DC /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1D20D7284EDB6C006DD1DC /* PersonCell.swift */; };
+		6EC70D6A2850CCCA008E7106 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC70D692850CCCA008E7106 /* MainViewModel.swift */; };
+		6EE33B262850505F003980EF /* DetailPersonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE33B252850505F003980EF /* DetailPersonView.swift */; };
+		6EE33B2A28505095003980EF /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EE33B2928505095003980EF /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,11 @@
 		6E1D20C9284ED8AC006DD1DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6E1D20CB284ED8AC006DD1DC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		6E1D20CE284ED8AC006DD1DC /* ContractorsTestTask.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContractorsTestTask.xcdatamodel; sourceTree = "<group>"; };
+		6E1D20D7284EDB6C006DD1DC /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		6E1D2109284F5824006DD1DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6EC70D692850CCCA008E7106 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		6EE33B252850505F003980EF /* DetailPersonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPersonView.swift; sourceTree = "<group>"; };
+		6EE33B2928505095003980EF /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +64,12 @@
 		6E1D20C1284ED8AB006DD1DC /* ContractorsTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				6E1D2109284F5824006DD1DC /* Info.plist */,
+				6E1D20E3284EF9CB006DD1DC /* MainModule */,
 				6E1D20C2284ED8AB006DD1DC /* ContractorsTestTaskApp.swift */,
-				6E1D20C4284ED8AB006DD1DC /* ContentView.swift */,
 				6E1D20C6284ED8AC006DD1DC /* Assets.xcassets */,
-				6E1D20CB284ED8AC006DD1DC /* Persistence.swift */,
 				6E1D20CD284ED8AC006DD1DC /* ContractorsTestTask.xcdatamodeld */,
+				6EE33B2728505079003980EF /* ServiceLayer */,
 				6E1D20C8284ED8AC006DD1DC /* Preview Content */,
 			);
 			path = ContractorsTestTask;
@@ -71,6 +81,50 @@
 				6E1D20C9284ED8AC006DD1DC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		6E1D20DF284EF998006DD1DC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6E1D20CB284ED8AC006DD1DC /* Persistence.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6E1D20E0284EF9A1006DD1DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6E1D20C4284ED8AB006DD1DC /* ContentView.swift */,
+				6EE33B252850505F003980EF /* DetailPersonView.swift */,
+				6E1D20D7284EDB6C006DD1DC /* PersonCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6E1D20E1284EF9A7006DD1DC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6EC70D692850CCCA008E7106 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6E1D20E3284EF9CB006DD1DC /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				6E1D20E1284EF9A7006DD1DC /* ViewModel */,
+				6E1D20E0284EF9A1006DD1DC /* View */,
+				6E1D20DF284EF998006DD1DC /* Model */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		6EE33B2728505079003980EF /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				6EE33B2928505095003980EF /* ImagePicker.swift */,
+			);
+			path = ServiceLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +198,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E1D20CC284ED8AC006DD1DC /* Persistence.swift in Sources */,
+				6E1D20D8284EDB6C006DD1DC /* PersonCell.swift in Sources */,
 				6E1D20C5284ED8AB006DD1DC /* ContentView.swift in Sources */,
 				6E1D20CF284ED8AC006DD1DC /* ContractorsTestTask.xcdatamodeld in Sources */,
+				6EC70D6A2850CCCA008E7106 /* MainViewModel.swift in Sources */,
 				6E1D20C3284ED8AB006DD1DC /* ContractorsTestTaskApp.swift in Sources */,
+				6EE33B2A28505095003980EF /* ImagePicker.swift in Sources */,
+				6EE33B262850505F003980EF /* DetailPersonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +336,9 @@
 				DEVELOPMENT_TEAM = 6JBWUYNSLZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ContractorsTestTask/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -307,6 +368,9 @@
 				DEVELOPMENT_TEAM = 6JBWUYNSLZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ContractorsTestTask/Info.plist;
+				INFOPLIST_KEY_NSAppleMusicUsageDescription = "";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
